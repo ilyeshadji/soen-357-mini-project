@@ -58,18 +58,18 @@ export default function Header() {
 
                 <ListItems
                     onClick={() =>
-                        redirect('/', '')
+                        redirect('/', 'DESIGN_DECISIONS')
                     }
                 >
-                    <StyledLink out={hideNavBar}>Visual Design</StyledLink>
+                    <StyledLink out={hideNavBar}>Design decisions</StyledLink>
                 </ListItems>
 
                 <ListItems
                     onClick={() =>
-                        redirect('/', '')
+                        redirect('/', 'VISUAL_DESIGN')
                     }
                 >
-                    <StyledLink out={hideNavBar}>Research</StyledLink>
+                    <StyledLink out={hideNavBar}>Visual design</StyledLink>
                 </ListItems>
             </LinksContainer>
         </Container>
@@ -86,6 +86,8 @@ const Container = styled.div`
   transition: background-color .4s ease-in-out;
 
   padding: 20px;
+
+  z-index: 1000;
 `
 
 const LogoContainer = styled.div``

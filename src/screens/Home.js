@@ -9,9 +9,16 @@ import RajPersona from '../assets/raj_2.png'
 import SilverSneakersLogoImg from '../assets/SilverSneakersLogo.png'
 import Graph1 from '../assets/graph1.png'
 import Graph2 from '../assets/graph2.png'
+import UserJourney from '../assets/Raj user journey.jpg'
+import UserFlowAndWireframes from '../assets/user_flow_and_wireframes.jpg'
+import ColorPallet from '../assets/color_pallet.PNG'
+import Gradient from '../assets/gradient.jpg'
+import SecondaryGradient from '../assets/secondary to white gradient.jpg'
 import styled from "styled-components";
 import {useLocation} from "react-router-dom";
 import Card from "../components/Card";
+import Zoom from 'react-medium-image-zoom'
+import 'react-medium-image-zoom/dist/styles.css'
 
 export default function Home() {
     const location = useLocation();
@@ -19,6 +26,8 @@ export default function Home() {
     const understandingTheProblemRef = useRef()
     const researchRef = useRef()
     const userResearchRef = useRef()
+    const designDecisionsRef = useRef()
+    const visualDesignRef = useRef()
 
     useEffect(() => {
         if (location.state?.section === 'UNDERSTANDING_THE_PROBLEM') {
@@ -31,6 +40,14 @@ export default function Home() {
 
         if (location.state?.section === 'USER_RESEARCH') {
             window.scrollTo({top: userResearchRef.current.offsetTop - 150, behavior: 'smooth'});
+        }
+
+        if (location.state?.section === 'DESIGN_DECISIONS') {
+            window.scrollTo({top: designDecisionsRef.current.offsetTop - 150, behavior: 'smooth'});
+        }
+
+        if (location.state?.section === 'VISUAL_DESIGN') {
+            window.scrollTo({top: visualDesignRef.current.offsetTop - 150, behavior: 'smooth'});
         }
     }, [location])
 
@@ -405,9 +422,20 @@ export default function Home() {
                     an individual who needs to have clear and simple instructions when using an application.
                 </SectionText>
 
-                <PersonaImage src={CharlesPersona}/>
-                <PersonaImage src={PeggyPersona}/>
-                <PersonaImage src={RajPersona}/>
+                <UserPersonasContainer>
+                    <Zoom>
+                        <PersonaImage src={CharlesPersona}/>
+                    </Zoom>
+
+                    <Zoom>
+                        <PersonaImage src={PeggyPersona}/>
+                    </Zoom>
+
+                    <Zoom>
+                        <PersonaImage src={RajPersona}/>
+                    </Zoom>
+                </UserPersonasContainer>
+
 
                 <SectionSubtitle>Ethical Guidelines</SectionSubtitle>
 
@@ -419,7 +447,7 @@ export default function Home() {
                     on Moodle.
                 </SectionText>
 
-                <SectionSubtitle>Informed by Research: Design Decisions</SectionSubtitle>
+                <SectionTitle ref={designDecisionsRef}>Informed by Research: Design Decisions</SectionTitle>
 
                 <SectionText>
                     The insights we obtained from our user research helped us to shape the design of our application. As
@@ -467,6 +495,53 @@ export default function Home() {
                     The design process ensured that it followed standards of simplicity, functionality, as well as
                     empathy, to ensure that the final product notably improves the lives of its elderly users daily.
                 </SectionText>
+
+                <SectionSubtitle>User Journey</SectionSubtitle>
+
+                <Zoom>
+                    <PersonaImage src={UserJourney}/>
+                </Zoom>
+
+                <SectionSubtitle>User flow and wireframes</SectionSubtitle>
+
+                <SectionText>
+                    We HIGHLY suggest to download the image to be able to see all of the components of our diagram.
+                </SectionText>
+
+                <Zoom>
+                    <PersonaImage src={UserFlowAndWireframes}/>
+                </Zoom>
+
+                <SectionSubtitle>Color Palette</SectionSubtitle>
+
+                <SectionText>
+                    The primary color blue is known to evoke feelings of trust and security and is often used in
+                    healthcare and technology applications to make users feel at ease and comfortable. It conveys
+                    reliability and calmness which can benefit users who may feel anxious about using new technologies.
+                </SectionText>
+
+                <SectionText>
+                    Our secondary color, teal, is a variant of blue-green that combines the calming properties of blue
+                    with the refreshing qualities of green. It can be associated with clarity of thought and is perfect
+                    for an app that aims to simplify the process of connecting with the community.
+                </SectionText>
+
+                <SectionText>
+                    Green, used as a gradient color, is associated with nature, health, and tranquility. It signifies
+                    growth and renewal and can have a calming effect on users. This makes it an excellent choice for
+                    areas of the app where you want to promote a sense of wellness and positivity. The neutral dark
+                    color offers high contrast against lighter backgrounds, which is essential for readability,
+                    especially for users with visual impairments.
+                </SectionText>
+
+                <ColorsContainer>
+                    <ColorsImages src={ColorPallet}/>
+                    <div style={{marginRight: '50px'}}></div>
+                    <ColorsImages src={Gradient}/>
+                    <ColorsImages src={SecondaryGradient}/>
+                </ColorsContainer>
+
+                <SectionTitle ref={visualDesignRef}>Visual Design</SectionTitle>
             </SectionContainer>
         </Container>
     )
@@ -642,5 +717,23 @@ const GraphContainer = styled.div`
 
 const GraphImage = styled.img`
   width: 100%;
+`
+
+const ColorsContainer = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+`
+
+const ColorsImages = styled.img`
+  object-fit: contain;
+  width: 33%;
+  height: 500px;
+`
+
+const UserPersonasContainer = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 `
 
