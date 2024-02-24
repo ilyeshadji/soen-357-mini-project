@@ -654,6 +654,112 @@ export default function Home() {
                 <DesignImageContainer windowWidth={windowWidth.current} center>
                     <DesignImage src={Settings}/>
                 </DesignImageContainer>
+
+                <SectionTitle>Conclusion</SectionTitle>
+
+                <SectionText>
+                    In conclusion, our project’s mission was to enhance the well-being of the elderly through a
+                    well-designed application, grounded in extensive research and user-centric design principles. The
+                    journey from understanding the unique challenges faced by older adults in the digital age to the
+                    development of an accessible, intuitive, and supportive app illustrates our commitment to improving
+                    their mental and physical health and strengthening social connections. By using the insights gained
+                    from user research, embracing inclusive design practices, and focusing on simplicity and
+                    functionality, we have created an application that not only addresses the immediate social needs of
+                    its users but also helps foster a long-term sense of community and belonging.
+                </SectionText>
+
+                <SectionTitle>References</SectionTitle>
+
+                <SectionText withoutIndent>
+                    1. National Council on Aging. "The Impact of COVID-19 on Older Adults." Available online:
+                    https://www.ncoa.org/news/resources-for-reporters/get-the-facts/healthy-aging-facts/ [Accessed Feb.
+                    10, 2024].
+                </SectionText>
+
+                <SectionText withoutIndent>
+                    2. Pew Research Center. "Tech Adoption Climbs Among Older Adults." Available online:
+                    https://www.pewresearch.org/internet/2017/05/17/technology-use-among-seniors/ [Accessed Feb. 10,
+                    2024].
+                </SectionText>
+
+                <SectionText withoutIndent>
+                    3. World Health Organization. "Decade of Healthy Ageing." Available online:
+                    https://www.who.int/initiatives/decade-of-healthy-ageing [Accessed Feb. 10, 2024].
+                </SectionText>
+
+                <SectionText withoutIndent>
+                    4. Pew Research Center. "Tech Adoption Climbs Among Older Adults," 2019. [Online]. Available:
+                    https://www.pewresearch.org/internet/2019/tech-adoption-climbs-among-older-adults/. [Accessed:
+                    10-Feb-2024].
+                </SectionText>
+
+                <SectionText withoutIndent>
+                    5. SilverSneakers GO™, App Store. [Online]. Available:
+                    https://apps.apple.com/us/app/silversneakers-go/id1459054790. [Accessed: 10-Feb-2024].
+                </SectionText>
+
+                <SectionText withoutIndent>
+                    6. Pillboxie, App Store. [Online]. Available: https://apps.apple.com/us/app/pillboxie/id417367089.
+                    [Accessed: 10-Feb-2024].
+                </SectionText>
+
+                <SectionText withoutIndent>
+                    7. Stitch, Official Website. [Online]. Available: https://www.stitch.net/. [Accessed: 10-Feb-2024].
+                </SectionText>
+
+                <SectionText withoutIndent>
+                    8. Lumosity, Official Website. [Online]. Available: https://www.lumosity.com. [Accessed:
+                    10-Feb-2024].
+                </SectionText>
+
+                <SectionText withoutIndent>
+                    9. "Things To Be Taken Care Of When Designing Apps For The Elderly," Business of Apps, May 22, 2018.
+                    [Online].
+                    Available:https://www.businessofapps.com/news/things-to-be-taken-care-of-when-designing-apps-for-the-elderly/.
+                    [Accessed: Feb. 10, 2024].
+                </SectionText>
+
+                <SectionText withoutIndent>
+                    10. "How to Develop Apps for Elderly Care: A Complete Guide," A3logics. [Online]. Available:
+                    https://www.a3logics.com/blog/how-to-develop-apps-for-elderly-care. [Accessed: Feb. 10, 2024].
+                </SectionText>
+
+                <SectionText withoutIndent>
+                    11. "Designing Apps For Seniors: 5 Traits Worth Considering," UX Studio. [Online]. Available:
+                    https://uxstudioteam.com/designing-apps-for-seniors/. [Accessed: Feb. 10, 2024].
+                </SectionText>
+
+                <SectionText withoutIndent>
+                    12. "10 Best Apps for Seniors in 2022 - Senior Living," Senior Living. [Online]. Available:
+                    https://www.seniorliving.org/cell-phone/apps/. [Accessed: Feb. 10, 2024].
+                </SectionText>
+
+                <SectionText withoutIndent>
+                    13. Medisafe, "Medisafe," Medisafe, Available: https://medisafeapp.com. [Accessed: February 10,
+                    2024].
+                    Available online.
+                </SectionText>
+
+                <SectionText withoutIndent>
+                    14. First Aid: American Red Cross, "First Aid: American Red Cross," American Red Cross, Available:
+                    https://www.redcross.org/get-help/how-to-prepare-for-emergencies/mobile-apps.html. [Accessed:
+                    February 10, 2024]. Available online.
+                </SectionText>
+
+                <SectionText withoutIndent>
+                    15. Lotsa Helping Hands, "Lotsa Helping Hands," Lotsa Helping Hands, Available:
+                    https://lotsahelpinghands.com. [Accessed: February 10, 2024]. Available online.
+                </SectionText>
+
+                <SectionText withoutIndent>
+                    16. Caring Village, "Caring Village," Caring Village, Available: https://caringvillage.com/product/.
+                    [Accessed: February 10, 2024]. Available online.
+                </SectionText>
+
+                <SectionText withoutIndent>
+                    17. CaringBridge, "CaringBridge," CaringBridge, Available: https://www.caringbridge.org/. [Accessed:
+                    February 10, 2024]. Available online.
+                </SectionText>
             </SectionContainer>
         </Container>
     )
