@@ -14,6 +14,26 @@ import UserFlowAndWireframes from '../assets/user_flow_and_wireframes.jpg'
 import ColorPallet from '../assets/color_pallet.PNG'
 import Gradient from '../assets/gradient.jpg'
 import SecondaryGradient from '../assets/secondary to white gradient.jpg'
+import Dashboard from '../assets/design/dashboard.png'
+import Settings from '../assets/design/Settings.png'
+import AudioCall from '../assets/design/contacts/Audio call.png'
+import Contacts from '../assets/design/contacts/Contacts.png'
+import FriendMessage from '../assets/design/contacts/Friend Messages.png'
+import FriendProfile from '../assets/design/contacts/Friend Profile.png'
+import Profile from '../assets/design/contacts/Profile.png'
+import VideoCall from '../assets/design/contacts/Video Call.png'
+import EventLegacy1 from '../assets/design/events legacy/EVENTS-1.png'
+import EventLegacy2 from '../assets/design/events legacy/EVENTS-2.png'
+import EventLegacy3 from '../assets/design/events legacy/EVENTS-3.png'
+import EventLegacy4 from '../assets/design/events legacy/EVENTS-4.png'
+import EventLegacy from '../assets/design/events legacy/EVENTS.png'
+import EventRevisited from '../assets/design/events revisited/EVENTS.png'
+import EventRevisited1 from '../assets/design/events revisited/EVENTS-1.png'
+import EventRevisited2 from '../assets/design/events revisited/EVENTS-2.png'
+import EventRevisited3 from '../assets/design/events revisited/EVENTS-3.png'
+import EventRevisited4 from '../assets/design/events revisited/EVENTS-4.png'
+import Onboarding from '../assets/design/onboarding/ONBOARDING.png'
+import Onboarding1 from '../assets/design/onboarding/ONBOARDING-1.png'
 import styled from "styled-components";
 import {useLocation} from "react-router-dom";
 import Card from "../components/Card";
@@ -28,6 +48,7 @@ export default function Home() {
     const userResearchRef = useRef()
     const designDecisionsRef = useRef()
     const visualDesignRef = useRef()
+    const windowWidth = useRef(window.innerWidth);
 
     useEffect(() => {
         if (location.state?.section === 'UNDERSTANDING_THE_PROBLEM') {
@@ -50,6 +71,14 @@ export default function Home() {
             window.scrollTo({top: visualDesignRef.current.offsetTop - 150, behavior: 'smooth'});
         }
     }, [location])
+
+    const DesignImage = ({src}) => {
+        return (
+            <Zoom>
+                <DesignImageComponent src={src}/>
+            </Zoom>
+        )
+    }
 
     return (
         <Container>
@@ -542,6 +571,89 @@ export default function Home() {
                 </ColorsContainer>
 
                 <SectionTitle ref={visualDesignRef}>Visual Design</SectionTitle>
+
+                <SectionSubtitle>Onboarding</SectionSubtitle>
+
+                <SectionText>
+                    Since we desire simplicity in the app, the onboarding needed to be easy to follow with as
+                    little steps as possible. Hence, the user can decide to watch the video to learn how the app
+                    functions, or simply to ignore it.
+                </SectionText>
+
+                <DesignImageContainer center>
+                    <DesignImage src={Onboarding} margin/>
+                    <DesignImage src={Onboarding1}/>
+                </DesignImageContainer>
+
+                <SectionSubtitle>Dashboard</SectionSubtitle>
+
+                <SectionText>
+                    The dashboard is the place from which the user can access all the features of the application. We
+                    decided to go straight to the point with the plus-value of our product so that the user can profit
+                    from the manipulation they want to perform as soon as possible.
+                </SectionText>
+
+                <DesignImageContainer windowWidth={windowWidth.current} center>
+                    <DesignImage src={Dashboard}/>
+                </DesignImageContainer>
+
+                <SectionSubtitle>Events first draft</SectionSubtitle>
+
+                <SectionText>
+                    Here is the first draft of our events page. Since there is a lot of information displayed on these
+                    pages, it was hard for us to make it simple. We wanted all the elements to pop out. In fact, from
+                    our research, we clearly underlined the fact that, for elderly people, we need as much contrast as
+                    possible for them to clearly see the possible actions. You'll see, in the next section the
+                    improvements that were made to these screens.
+                </SectionText>
+
+                <DesignImageContainer windowWidth={windowWidth.current}>
+                    <DesignImage src={EventLegacy}/>
+                    <DesignImage src={EventLegacy1}/>
+                    <DesignImage src={EventLegacy2}/>
+                    <DesignImage src={EventLegacy3}/>
+                    <DesignImage src={EventLegacy4}/>
+                </DesignImageContainer>
+
+                <SectionSubtitle>Events (revised)</SectionSubtitle>
+
+                <DesignImageContainer windowWidth={windowWidth.current}>
+                    <DesignImage src={EventRevisited1}/>
+                    <DesignImage src={EventRevisited}/>
+                    <DesignImage src={EventRevisited2}/>
+                    <DesignImage src={EventRevisited3}/>
+                    <DesignImage src={EventRevisited4}/>
+                </DesignImageContainer>
+
+                <SectionSubtitle>Contacts</SectionSubtitle>
+
+                <SectionText>
+                    It is important for us that the users are not bombarded with information about their contacts. It is
+                    also a necessity that the main (and only) action that they can pose on this screen is clear and
+                    easily achievable. In this case, to start or continue a conversation with their friend.
+                </SectionText>
+
+                <DesignImageContainer windowWidth={windowWidth.current}>
+                    <DesignImage src={Profile}/>
+                    <DesignImage src={FriendProfile}/>
+                    <DesignImage src={Contacts}/>
+                    <DesignImage src={FriendMessage}/>
+                    <DesignImage src={AudioCall}/>
+                    <DesignImage src={VideoCall}/>
+                </DesignImageContainer>
+
+                <SectionSubtitle>Settings</SectionSubtitle>
+
+                <SectionText>
+                    With these settings, the user can change the way the application looks and change their preferences
+                    to see more events that fit their personality. This will allow them to connect with people that
+                    share the same interests increasing the odds of finding new friends an expanding their social
+                    networks.
+                </SectionText>
+
+                <DesignImageContainer windowWidth={windowWidth.current} center>
+                    <DesignImage src={Settings}/>
+                </DesignImageContainer>
             </SectionContainer>
         </Container>
     )
@@ -707,6 +819,13 @@ const PersonaImage = styled.img`
   object-fit: contain;
   width: 100%;
   border-radius: 30px;
+
+  &:hover {
+    opacity: 0.7;
+  }
+
+  transition: opacity 0.2s ease-in-out;
+
 `
 
 const GraphContainer = styled.div`
@@ -735,5 +854,28 @@ const UserPersonasContainer = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+`
+
+const DesignImageContainer = styled.div`
+  display: flex;
+  flex-direction: row;
+  flex: 1;
+  justify-content: ${props => props.center ? 'center' : 'flex-start'};
+  align-items: flex-start;
+  max-width: ${props => props.windowWidth ? props.windowWidth : ''};
+  margin-top: 30px;
+  overflow: hidden;
+`
+
+const DesignImageComponent = styled.img`
+  object-fit: contain;
+  margin-right: ${props => props.noMargin ? 0 : '50px'};
+  width: 80%;
+
+  &:hover {
+    opacity: 0.7;
+  }
+
+  transition: opacity 0.2s ease-in-out;
 `
 
