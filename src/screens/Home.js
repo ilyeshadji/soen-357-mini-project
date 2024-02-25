@@ -444,10 +444,10 @@ export default function Home() {
                 </SectionText>
 
                 <SectionText>
-                    For example, one persona that we created was based on “Michael, the retiree who is an active social
-                    butterfly”. This persona represents an individual who would like to be socially connected and active
-                    at the same time to not feel isolated. Another persona we created was based on “Joanne, the
-                    tech-scared retiree”. This persona represents
+                    For example, one persona that we created was based on Peggy. This persona represents an individual
+                    who would like to be socially connected and active
+                    at the same time to not feel isolated. Another persona we created was based on Charles. This persona
+                    represents
                     an individual who needs to have clear and simple instructions when using an application.
                 </SectionText>
 
